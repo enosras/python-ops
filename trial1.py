@@ -1,6 +1,13 @@
 import tkinter as tki
 from time import sleep
+import dbm as db_connect
 
+mydb = mysql.connector.connect(
+        host="localhost",  # Your MySQL host
+        user="root",  # Your MySQL username
+        password="2025@Redmond",  # Your MySQL password
+        database="trial_1"  # The database you want to connect to
+    )
 
 def on_button_click():
     """Function to be called when the button is clicked."""
@@ -16,8 +23,12 @@ def clear_label():
     selected_option.set(options [0])
 def save_trial ():
     name_variable = entry_widget.get()
-    label.config(text=f' Bye {name_variable} , your money is coming')
-    sleep(2)
+
+    if name_variable == "":
+        label.config(text=f' Enter the name please')
+    else:
+        label.config(text=f' Bye {name_variable} , your money is coming')
+        sleep(2)
 
 # Create the main application window
 root = tki.Tk()
