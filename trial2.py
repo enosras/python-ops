@@ -13,11 +13,12 @@ try:
 
     if connection.is_connected():
         print("Successfully connected to MySQL database.")
+
         # You can now create a cursor and execute SQL queries
-        # cursor = connection.cursor()
-        # cursor.execute("SELECT * FROM your_table")
-        # results = cursor.fetchall()
-        # print(results)
+        cursor = connection.cursor()
+        cursor.execute("SELECT * FROM trial_1")
+        results = cursor.fetchall()
+        print(results)
 
 except mysql.connector.Error as err:
     print(f"Error connecting to MySQL: {err}")
