@@ -6,6 +6,7 @@ try:
         (
         host='localhost',
         user='enos',
+        #port=3306,
         password='2025@Redmond',
         database='trial_1'
     )

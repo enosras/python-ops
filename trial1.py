@@ -1,13 +1,6 @@
 import tkinter as tki
 from time import sleep
-import dbm as db_connect
 
-mydb = mysql.connector.connect(
-        host="localhost",  # Your MySQL host
-        user="root",  # Your MySQL username
-        password="2025@Redmond",  # Your MySQL password
-        database="trial_1"  # The database you want to connect to
-    )
 
 def on_button_click():
     """Function to be called when the button is clicked."""
