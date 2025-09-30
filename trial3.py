@@ -25,7 +25,7 @@ def clear_label():
     selected_option.set(options [0])
 def save_trial ():
     name_variable = entry_widget.get()
-    sex = "male"
+    sex = selected_option.get()
 
     #if name_variable == "":
         #label.config(text=f' Enter the name please')
@@ -64,6 +64,7 @@ selected_option = tki.StringVar(root)
 selected_option.set(options[0])  # Set default value
 
 dropdown = tki.OptionMenu(root, selected_option, *options)
+#selection = selected_option.get()
 dropdown.pack(pady=10)
 
 
