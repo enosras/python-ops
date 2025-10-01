@@ -1,6 +1,4 @@
 import tkinter as tki
-from time import sleep
-import dbm as db_conn
 
 
 def on_button_click():
@@ -18,11 +16,7 @@ def clear_label():
 def save_trial ():
     name_variable = entry_widget.get()
 
-    if name_variable == "":
-        label.config(text=f' Enter the name please')
-    else:
-        label.config(text=f' Bye {name_variable} , your money is coming')
-        sleep(2)
+    label.config(text=f' Bye {name_variable} , your money is coming')
 
 # Create the main application window
 root = tki.Tk()
